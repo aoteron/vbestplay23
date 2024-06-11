@@ -1,0 +1,18 @@
+# Utiliza la extensión REST Client en Visual Studio Code para enviar esta solicitud y ver la respuesta.
+
+# Método: POST
+# Para crear un nuevo usuario, envía una solicitud POST a la URL anterior con
+# el cuerpo JSON que contiene "username", "email" y "password".
+
+# Ejemplo:
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "email": "testuser2@example.com",
+  "password": "TestPassword123"
+}
+
+# Modifica los valores de "username", "email" y "password" según sea necesario
+# para crear diferentes usuarios.
