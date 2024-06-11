@@ -1,0 +1,10 @@
+# Utiliza la extensión REST Client en Visual Studio Code para enviar esta solicitud y ver la respuesta.
+
+# Método: DELETE
+# Para eliminar un usuario por ID, envía una solicitud DELETE a la URL anterior.
+
+# Ejemplo:
+DELETE http://localhost:4000/api/users/{id}
+
+# Reemplaza {id} con el ID del usuario que deseas eliminar.
+# No se necesita un cuerpo de solicitud.

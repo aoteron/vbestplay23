@@ -50,3 +50,40 @@ export const getUserById = async (req: Request, res: Response) => {
     res.status(500).json('Error al obtener el usuario ' + error);
   }
 };
+
+export const updateUser = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { username, email, password } = req.body;
+
+  try {
+    const user = await UserModel.findById(id);
+    if (!user) {
+      return res.status(404).send('Usuario no encontrado');
+    }
+
+    if (username) user.username = username;
+    if (email) user.email = email;
+    if (password) user.password = await bcrypt.hash(password, 10);
+
+    await user.save();
+
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json('Error al actualizar el usuario ' + error);
+  }
+};
+
+export const deleteUser = async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  try {
+    const user = await UserModel.findByIdAndDelete(id);
+    if (!user) {
+      return res.status(404).send('Usuario no encontrado');
+    }
+
+    res.status(200).send('Usuario eliminado');
+  } catch (error) {
+    res.status(500).json('Error al eliminar el usuario ' + error);
+  }
+};

@@ -1,0 +1,10 @@
+# Utiliza la extensión REST Client en Visual Studio Code para enviar esta solicitud y ver la respuesta.
+
+# Método: GET
+# Para obtener un usuario por ID, envía una solicitud GET a la URL anterior.
+
+# Ejemplo:
+GET http://localhost:4000/api/users/{id}
+
+# Reemplaza {id} con el ID del usuario que deseas obtener.
+# No se necesita un cuerpo de solicitud.

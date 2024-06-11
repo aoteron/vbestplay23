@@ -1,0 +1,18 @@
+# Utiliza la extensión REST Client en Visual Studio Code para enviar esta solicitud y ver la respuesta.
+
+# Método: PUT
+# Para actualizar un usuario por ID, envía una solicitud PUT a la URL anterior con
+# el cuerpo JSON que contiene "username", "email" y/o "password".
+
+# Ejemplo:
+PUT http://localhost:4000/api/users/{id}
+Content-Type: application/json
+
+{
+  "username": "newusername",
+  "email": "newemail@example.com",
+  "password": "NewPassword123"
+}
+
+# Reemplaza {id} con el ID del usuario que deseas actualizar.
+# Modifica los valores de "username", "email" y "password" según sea necesario.
